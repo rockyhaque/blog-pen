@@ -97,3 +97,28 @@ https://www.npmjs.com/package/rehype-raw
 ```
 npm i rehype-raw
 ```
+
+
+#### React Spinners
+https://www.npmjs.com/package/react-spinners
+
+***Installl***
+```
+npm i react-spinners
+```
+#### React Spinners
+https://www.npmjs.com/package/react-spinners
+
+***Installl***
+```
+npm i react-spinners
+```
+
+
+#### React Hot Toast
+https://react-hot-toast.com/
+
+***Installl***
+```
+npm i react-hot-toast
+```

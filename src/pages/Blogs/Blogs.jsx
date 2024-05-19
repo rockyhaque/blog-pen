@@ -1,17 +1,14 @@
-
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import BlogCard from "../../components/BlogCard/BlogCard";
+import Loader from "../../components/Loader/Loader";
 
 const Blogs = () => {
-//   const [blogs, setBlogs] = useState([]);
-//   useEffect(() => {
-//     fetch("https://dev.to/api/articles?per_page=20&top=7")
-//       .then((res) => res.json())
-//       .then((data) => setBlogs(data));
-//   }, []);
+  const navigation = useNavigation();
+  const blogs = useLoaderData();
 
-  const blogs = useLoaderData()
-  console.log(blogs);
+  if (navigation.state === "loading") {
+    return <Loader></Loader>;
+  }
 
   return (
     <section className=" text-gray-100">
@@ -30,21 +27,19 @@ const Blogs = () => {
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
               {blogs[0]?.title}
             </h3>
-            <span className="text-xs text-gray-400">{new Date(blogs[0]?.published_at).toLocaleDateString()}</span>
-            <p>
-            {blogs[0]?.description}
-            </p>
+            <span className="text-xs text-gray-400">
+              {new Date(blogs[0]?.published_at).toLocaleDateString()}
+            </span>
+            <p>{blogs[0]?.description}</p>
           </div>
         </a>
 
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Dynamic Cards */}
-        {
-            blogs.map(blog => <BlogCard key={blog.id} blog={blog}></BlogCard>
-            )
-        }
+          {blogs.slice(1, 19).map((blog) => (
+            <BlogCard key={blog.id} blog={blog}></BlogCard>
+          ))}
         </div>
-        
       </div>
     </section>
   );

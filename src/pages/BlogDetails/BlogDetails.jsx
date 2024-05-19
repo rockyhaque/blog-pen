@@ -1,18 +1,33 @@
 import { useState } from "react";
-import { Link, Outlet, useLoaderData } from "react-router-dom";
+import { Link, Outlet, useLoaderData, useNavigation } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
+import { BsBookmarks } from "react-icons/bs";
+import { saveBlog } from "../../utilites/utility";
+
 
 const BlogDetails = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const blogDetails = useLoaderData();
-  console.log(blogDetails);
+  const navigation = useNavigation();
+
   const {
     comments_count,
     title,
     reading_time_minutes,
     public_reactions_count,
     published_at,
-    tags,
   } = blogDetails;
+
+  
+  
+  if(navigation.state === 'loading'){
+    return <Loader></Loader>
+  }
+
+  const hangleBookmark = blogDetails => {
+    saveBlog(blogDetails)
+  }
+
   return (
     <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
       <article className="space-y-8">
@@ -75,6 +90,13 @@ const BlogDetails = () => {
               </svg>
               <span>Author</span>
             </Link>
+
+            {/* Bookmark Btn */}
+            <div onClick={() => hangleBookmark(blogDetails)} className="bg-primary p-3 rounded-full bg-opacity-20  hover:bg-opacity-30 hover:scale-105 overflow-hidden ml-4 cursor-pointer">
+              <BsBookmarks size={20} className="text-secondary" />
+            </div>
+            
+
           </div>
         </div>
         <Outlet></Outlet>
