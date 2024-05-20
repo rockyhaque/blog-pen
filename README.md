@@ -3,6 +3,9 @@
 
 #### A sleek, user-friendly platform for writers to share insights, stories, and expertise. Engage with diverse content and unleash your creativity, all on an intuitive frontend interface.
 
+### Live Link
+https://blog-pen.netlify.app
+
 ### Api
 ```
 https://dev.to/api/articles
@@ -11,7 +14,7 @@ https://dev.to/api/articles
 ### Api Documentation
 https://developers.forem.com/api/v1
 
-## Query Parameters
+## Query Parameters:
 
 ## page
 - **Type:** integer `<int32>` >= 1
@@ -99,13 +102,6 @@ npm i rehype-raw
 ```
 
 
-#### React Spinners
-https://www.npmjs.com/package/react-spinners
-
-***Installl***
-```
-npm i react-spinners
-```
 #### React Spinners
 https://www.npmjs.com/package/react-spinners
 

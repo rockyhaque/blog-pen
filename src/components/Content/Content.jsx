@@ -9,7 +9,7 @@ const Content = () => {
   return (
     <div
       rel="noopener noreferrer"
-      className="mx-auto group border border-opacity-30 hover:no-underline focus:no-underline text-black p-4 rounded-lg"
+      className="mx-auto group border border-opacity-30 hover:no-underline focus:no-underline  p-4 rounded-lg"
     >
       <img
         role="presentation"
@@ -22,7 +22,7 @@ const Content = () => {
             key={tag}
             rel="noopener noreferrer"
             href="#"
-            className="px-3 py-1 rounded-sm hover:underline bg-violet-700 dark:text-gray-200"
+            className="px-3 py-1 rounded-sm hover:underline bg-violet-700 "
           >
             #{tag}
           </a>
@@ -31,7 +31,7 @@ const Content = () => {
       <div className="p-6 space-y-2">
         <a 
         href={url}
-        target="_blank" className="text-2xl text-black font-semibold group-hover:underline group-focus:underline">
+        target="_blank" className="text-2xl  font-semibold group-hover:underline group-focus:underline">
           {title}
         </a>
         

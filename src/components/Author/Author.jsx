@@ -6,7 +6,7 @@ const Author = () => {
   const {github_username, name,profile_image, twitter_username, username, website_url} = blogDetails.user;
   console.log(blogDetails);
   return (
-    <div className="flex flex-col p-6  rounded-xl sm:px-12 dark:bg-base-100 dark:text-gray-800">
+    <div className="flex flex-col p-6  rounded-xl sm:px-12">
       <img
         src={profile_image}
         alt=""
@@ -15,7 +15,7 @@ const Author = () => {
       <div className="space-y-4 text-center divide-y dark:divide-gray-300">
         <div className="my-2 space-y-1">
           <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
-          <p className="px-5 text-xs sm:text-base dark:text-gray-600">
+          <p className="px-5 text-xs sm:text-base ">
             {username}
           </p>
         </div>
@@ -24,7 +24,7 @@ const Author = () => {
             target="_blank"
             href={`https://github.com/${github_username}`}
             aria-label="GitHub"
-            className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+            className="p-2 rounded-md hover:text-violet-600"
           >
             <svg
               viewBox="0 0 496 512"
@@ -38,7 +38,7 @@ const Author = () => {
             target="_blank"
             href={website_url}
             aria-label="Dribble"
-            className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+            className="p-2 rounded-md hover:text-violet-600"
           >
             <CgWebsite />
           </a>
@@ -46,7 +46,7 @@ const Author = () => {
             target="_blank"
             href={`https://x.com/${twitter_username}`}
             aria-label="Twitter"
-            className="p-2 rounded-md dark:text-gray-800 hover:dark:text-violet-600"
+            className="p-2 rounded-md hover:text-violet-600"
           >
             <svg
               viewBox="0 0 512 512"

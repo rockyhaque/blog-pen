@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const handleThemeToggle = (e) => {
     if (e.target.checked) {
-      setTheme("luxury");
+      setTheme("dracula");
     } else {
       setTheme("light");
     }
@@ -28,17 +28,34 @@ const Navbar = () => {
       </div>
       <div className="flex-none">
         <ul className="menu-horizontal px-1">
-          <div className="space-x-1 md:space-x-6 lg:space-x-6
-          text-sm">
-            <NavLink to="/" className={({isActive}) => 
-              isActive ? 'font-bold text-red-500' : 'font-bold'
-            }>Home</NavLink>
-            <NavLink to="/blogs" className={({isActive}) => 
-              isActive ? 'font-bold text-red-500' : 'font-bold'
-            }>Blogs</NavLink>
-            <NavLink to="/bookmarks" className={({isActive}) => 
-              isActive ? 'font-bold text-red-500' : 'font-bold'
-            }>Bookmarks</NavLink>
+          <div
+            className="space-x-1 md:space-x-6 lg:space-x-6
+          text-sm"
+          >
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "font-bold text-purple-700" : "font-bold"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive ? "font-bold text-purple-700" : "font-bold"
+              }
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              to="/bookmarks"
+              className={({ isActive }) =>
+                isActive ? "font-bold text-purple-700" : "font-bold"
+              }
+            >
+              Bookmarks
+            </NavLink>
           </div>
 
           <label className="cursor-pointer grid place-items-center ml-6">

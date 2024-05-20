@@ -9,7 +9,7 @@ const BlogCard = ({ blog, deleteable, handleDelete }) => {
       <Link
         to={`/blog/${id}`}
         rel="noopener noreferrer"
-        className="max-w-sm mx-auto group transition border-2 hover:scale-105 border-primary hover:border-info border-opacity-30 hover:no-underline focus:no-underline text-black p-4 rounded-lg"
+        className="max-w-sm mx-auto group transition border-2 hover:scale-105 border-primary hover:border-info border-opacity-30 hover:no-underline focus:no-underline p-4 rounded-lg"
       >
         <img
           role="presentation"
