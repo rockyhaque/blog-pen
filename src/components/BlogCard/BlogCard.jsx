@@ -17,17 +17,17 @@ const BlogCard = ({ blog, deleteable, handleDelete }) => {
           src={cover_image || "https://i.ibb.co/nmWx8cM/404.jpg"}
         />
         <div className="p-6 space-y-2">
-          <h3 className="text-2xl text-black font-semibold group-hover:underline group-focus:underline">
+          <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
             {title}
           </h3>
-          <span className="text-xs text-gray-400">
+          <span className="text-xs ">
             {new Date(published_at).toLocaleDateString()}
           </span>
           <p>{description}</p>
         </div>
       </Link>
       {
-        deleteable && (<div onClick={() => handleDelete(id)}  className="bg-primary p-3 ml-5 rounded-full hover:bg-secondary group  cursor-pointer hover:scale-105 absolute -top-5 -right-5"><TiDeleteOutline size={40} className="text-secondary group-hover:text-primary" /></div>)
+        deleteable && (<div onClick={() => handleDelete(id)}  className="p-3 ml-5 rounded-full hover:bg-purple-400 cursor-pointer hover:scale-105 absolute -top-10 -right-10"><TiDeleteOutline size={40} className="group-hover:text-primary" /></div>)
       }
       
     </div>

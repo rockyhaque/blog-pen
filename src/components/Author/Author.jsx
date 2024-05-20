@@ -6,7 +6,7 @@ const Author = () => {
   const {github_username, name,profile_image, twitter_username, username, website_url} = blogDetails.user;
   console.log(blogDetails);
   return (
-    <div className="flex flex-col p-6 shadow-sm rounded-xl sm:px-12 dark:bg-base-100 dark:text-gray-800">
+    <div className="flex flex-col p-6  rounded-xl sm:px-12 dark:bg-base-100 dark:text-gray-800">
       <img
         src={profile_image}
         alt=""

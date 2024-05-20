@@ -11,12 +11,12 @@ const Blogs = () => {
   }
 
   return (
-    <section className=" text-gray-100">
+    <section className=" ">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <a
           rel="noopener noreferrer"
           href="#"
-          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 text-black "
+          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 "
         >
           <img
             src={blogs[0]?.cover_image}
@@ -27,7 +27,7 @@ const Blogs = () => {
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
               {blogs[0]?.title}
             </h3>
-            <span className="text-xs text-gray-400">
+            <span className="text-xs ">
               {new Date(blogs[0]?.published_at).toLocaleDateString()}
             </span>
             <p>{blogs[0]?.description}</p>
