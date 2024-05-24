@@ -3,6 +3,7 @@ import { Link, Outlet, useLoaderData, useNavigation } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import { BsBookmarks } from "react-icons/bs";
 import { saveBlog } from "../../utilites/utility";
+import { Helmet } from "react-helmet-async";
 
 
 const BlogDetails = () => {
@@ -30,6 +31,9 @@ const BlogDetails = () => {
 
   return (
     <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
+      <Helmet>
+      <title>Details - {title}</title>
+      </Helmet>
       <article className="space-y-8">
         <div className="space-y-6">
           <h1 className="text-4xl font-bold md:tracking-tight md:text-5xl">

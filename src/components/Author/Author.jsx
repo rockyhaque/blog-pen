@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { CgWebsite } from "react-icons/cg";
 import { useLoaderData } from "react-router-dom";
 
@@ -7,6 +8,9 @@ const Author = () => {
   console.log(blogDetails);
   return (
     <div className="flex flex-col p-6  rounded-xl sm:px-12">
+      <Helmet>
+      <title>Author | {name}</title>
+      </Helmet>
       <img
         src={profile_image}
         alt=""

@@ -1,6 +1,7 @@
 import { useLoaderData, useNavigation } from "react-router-dom";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import Loader from "../../components/Loader/Loader";
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
   const navigation = useNavigation();
@@ -11,7 +12,10 @@ const Blogs = () => {
   }
 
   return (
-    <section className=" ">
+    <section>
+      <Helmet>
+        <title>Blog Pen | Blog</title>
+      </Helmet>
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <a
           rel="noopener noreferrer"

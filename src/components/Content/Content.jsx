@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { Helmet } from "react-helmet-async";
 
 const Content = () => {
   const blogDetails = useLoaderData();
@@ -11,6 +12,9 @@ const Content = () => {
       rel="noopener noreferrer"
       className="mx-auto group border border-opacity-30 hover:no-underline focus:no-underline  p-4 rounded-lg"
     >
+      <Helmet>
+      <title>Blog Pen | Content</title>
+      </Helmet>
       <img
         role="presentation"
         className="object-cover w-full rounded h-44 bg-gray-500"
